@@ -1,0 +1,58 @@
+button{
+background-color: rgb(129, 125, 125);
+color: white;
+margin-left:445px;
+width:100px;
+height:20px;
+}
+.contenair{
+text-align: center;
+background-color:blue;
+margin-right:300px;
+margin-left: 295px;
+}
+.conte{
+    text-align: center;
+    background-color:white;
+    margin-right:5px;
+
+    }
+#button1{
+float: center;
+background-color:white;
+color: blue;
+ width:150px;
+ height:25px;
+ margin-left: 5px;
+ 
+}
+h4{
+    color: rgb(107, 104, 104);
+    margin-top: 0px;
+    margin-bottom:0px
+}
+h5{
+    color: blue;
+}
+.blac{
+    background-color: black;
+    height:500px;
+}
+#button{
+    float: center;
+    background-color:white;
+    color: blue;
+    margin-left: auto;
+     width:170px;
+     height:20px;
+}
+
+input
+{
+ margin: 3px;
+ margin-bottom: 5px;
+padding: 5px;
+padding-left: 45px;
+background-color:rgb(209, 194, 194)
+};
+
