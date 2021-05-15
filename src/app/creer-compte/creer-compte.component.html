@@ -1,0 +1,50 @@
+<h1>Créer un compte</h1>
+<div id="register">
+    <div id="form">
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Nom</mat-label>
+                <input matInput type="text" name="nom" placeholder="Saisissez votre nom" [(ngModel)]="registerUserData.nom" required>
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Prenom</mat-label>
+                <input matInput type="text" name="prenom" placeholder="Saisissez votre prenom" [(ngModel)]="registerUserData.prenom" required>
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </p>
+    
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+              <mat-label>Entrer votre adresse mail</mat-label>
+              <input matInput placeholder="pat@example.com" name="email" [formControl]="email" [(ngModel)]="registerUserData.email" required>
+              <mat-icon matSuffix>mail</mat-icon>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+        
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Selectionner votre profil</mat-label>
+                <mat-select name="profil" [(ngModel)]="registerUserData.profil" required>
+                    <mat-option value="Administrateur">Administrateur</mat-option>
+                    <mat-option value="Formateur">Formateur</mat-option>
+                    <mat-option value="Etudiant">Etudiant</mat-option>
+                    <mat-option value="Finance">Finance</mat-option>
+                </mat-select>
+                <mat-icon matSuffix>perm_identity</mat-icon>
+            </mat-form-field>
+        </div>
+        <div class="example-button-row">
+            <button mat-button color="primary" (click)="registerUser()" style="background-color: blue; color: white; width: 150px;">Se connecter</button>
+        </div>
+    </div>
+    <div>
+        <img id="img" src="../assets/undraw_Forms_re_pkrt.svg" alt="" srcset="">
+    </div>
+</div>
+  
+  
+  

@@ -1,0 +1,42 @@
+h1 {
+  text-align: center;
+  font-size: 24px;
+  color: blue;
+}
+#register {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+#form {
+  margin-left: 25%;
+  margin-right: 16px;
+}
+
+#img {
+  width: 350px;
+  height: 300px;
+  margin-top: 55px;
+}
+
+.example-button-row {
+  display: table-cell;
+}
+
+.example-button-row {
+  display: block;
+  margin-left: 35px;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+  #img {
+    display: none;
+  }
+}

@@ -1,0 +1,28 @@
+.fpwd {
+  display: inline-block;
+  margin-top: 75px;
+  margin-left: 35%;
+  width: 400px;
+  background-color: rgb(234, 251, 251);
+}
+.textbox {
+  margin-left: 20%;
+}
+h4 {
+  text-align: center;
+  color: blue;
+}
+.btn {
+  margin-left: 35%;
+}
+
+@media screen and (max-width: 575px) {
+  .fpwd {
+    margin-left: 15%;
+    width: 300px;
+    background-color: rgb(234, 251, 251);
+  }
+  .textbox {
+    margin-left: 10%;
+  }
+}

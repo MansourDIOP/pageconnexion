@@ -1,0 +1,34 @@
+<div class="content" role="main">
+  <div class="login-box">
+    <h1>Login</h1>
+    <p id="logIcon"><img src="../assets/img.png" alt="" style="width: 250; height: 200px;"></p>
+
+    <div class="googleConnexion">
+      <button class="btn btn-primary" (click)="registersUsers()"><img src="../assets/google.png" alt="" style="width: 15px; height: 13px;"> se conecter avec google</button>
+    </div>
+
+    <h4 style="text-align: center;">Ou</h4>
+    <div class="textbox">
+      <mat-form-field appearance="fill">
+        <mat-label>Entrer votre adresse mail</mat-label>
+        <input matInput placeholder="pat@example.com" name="email" [formControl]='email' [(ngModel)]="registerUserData.email" required>
+        <mat-icon matSuffix>mail</mat-icon>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="textbox">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="registerUserData.password" name="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <a mat-button routerLink="/forget" routerLinkActive="active" target="_blank">Mot de passe oublé</a>
+
+    <input class="btn btn-primary" (click)="registersUsers()" type="button" name="" value="Connexion">
+    <br><br>
+  </div>
+</div><br><br>
