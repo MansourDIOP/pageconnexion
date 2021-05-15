@@ -1,0 +1,13 @@
+<div class="fpwd">
+    <h4>Mot de passe oublié</h4>
+    <div class="textbox">
+        <mat-form-field appearance="fill">
+          <mat-label>Entrer votre adresse mail</mat-label>
+          <input matInput placeholder="mindset@example.com" name="mail" [formControl]='email' [(ngModel)]="registerUserData.email" required>
+          <mat-icon matSuffix>mail</mat-icon>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+      <input class="btn btn-primary" type="button" name="" value="Envoyer">  
+</div>
+  
