@@ -28,7 +28,7 @@ export class CreerCompteComponent{
   }
   getErrorMessage() {
     if (this.email.hasError('required')) {
-      return 'You must enter a value';
+      return 'Ce champs ne peut pas être vide';
     }
 
     return this.email.hasError('email') ? 'Not a valid email' : '';
