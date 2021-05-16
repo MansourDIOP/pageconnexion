@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./etudiants.component.css']
 })
 export class EtudiantsComponent implements OnInit {
-
+  monimage:string = "assets/casque etudiant.jpeg";
   constructor() { }
 
   ngOnInit(): void {
