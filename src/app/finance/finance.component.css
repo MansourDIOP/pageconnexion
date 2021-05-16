@@ -1,0 +1,76 @@
+.customcls {
+    position: relative;
+    bottom: 300px;
+}
+
+.titr {
+    position: relative;
+    top: 300px;
+    background-color: #2945DD;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+h2 {
+    position: relative;
+    top: 210px;
+    font-size: 40px;
+    display: flex;
+    font-family: 6C6868;
+    margin: 150px 100px;
+}
+
+.finance1 {
+    position: relative;
+    bottom: 1700px;
+    top: 0px;
+    margin: 0px auto;
+    height: 469px;
+    width: 664px;
+    left: 365px;
+    border-radius: 0px;
+}
+
+.finance2 {
+    position: relative;
+    display: flex;
+    width: 150px;
+    height: 150px;
+    left: 200px;
+}
+
+.orangeMoney {
+    position: relative;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    left: 700px;
+}
+
+.budget {
+    position: relative;
+    bottom: 175px;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    left: 700px;
+}
+
+p {
+    position: relative;
+    bottom: 350px;
+    left: 450px;
+    height: 28px;
+    width: 492px;
+    border-radius: nullpx;
+}
+
+button {
+    position: relative;
+    color: black;
+    display: flex;
+    left: 650px;
+    bottom: 150px;
+    border-radius: 1rem;
+}
