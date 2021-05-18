@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../Services/auth.service'
 import {FormControl, Validators} from '@angular/forms';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-connexion',
@@ -9,7 +10,8 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class ConnexionComponent implements OnInit {
   title = 'gestionUtilisateur';
-  constructor(private _auth : AuthService ){}
+  constructor(private _auth : AuthService,
+              private _router: Router ){}
   registerUserData = {
     email : "pat@example.com",
     password : 'password'
@@ -24,7 +26,20 @@ export class ConnexionComponent implements OnInit {
   registersUsers(){
     this._auth.registerUser(this.registerUserData)
     .subscribe(
-      (res: any) => console.log(res),
+      (res: any) => {
+        console.log(res)
+        localStorage.setItem('token', res.token)
+        if (res.profil == 'Etudiant') {
+          this._router.navigate(['/etudiants'])
+        }else if (res.profil == 'Formateur'){
+          this._router.navigate(['/formateurs'])
+        }else if (res.profil == 'Finance') {
+          this._router.navigate(['/finances'])
+        }else{
+          this._router.navigate(['/admin'])
+        }
+      
+      },
       (err: any) => console.log(err)
     )
   }

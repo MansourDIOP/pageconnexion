@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CreerCompteService } from '../Services/creer-compte.service'
 import {FormControl, Validators} from '@angular/forms';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-register',
@@ -17,12 +18,17 @@ export class CreerCompteComponent{
   };
   email = new FormControl('', [Validators.required,
      Validators.email]);
-  constructor(private _auth: CreerCompteService) { }
+  constructor(private _auth: CreerCompteService,
+              private _router: Router) { }
 
   registerUser(){
     this._auth.registerUser(this.registerUserData)
     .subscribe(
-      (res: any) => console.log(res),
+      (res: any) => {
+        console.log(res)
+        localStorage.setItem('token', res.token)
+        this._router.navigate(['/admin'])
+      },
       (err: any) => console.log(err)
     )
   }
