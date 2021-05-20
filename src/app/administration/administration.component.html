@@ -1,1 +1,15 @@
-<p>administration works!</p>
+<h1 style="color: blue; text-align: center;">Administration des utilisateurs</h1>
+<div class="list row">
+    
+    <div class="col-md-6">
+      <h4>Tutorials List</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let user of allUsers; let i = index"
+        >{{ allUsers[i] }}
+        </li>
+      </ul>
+    </div>
+    
+  </div>

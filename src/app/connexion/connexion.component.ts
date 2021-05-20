@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../Services/auth.service'
 import {FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router'
+import { UsersRecuperationService } from '../Services/users-recuperation.service'
 
 @Component({
   selector: 'app-connexion',
@@ -10,8 +11,9 @@ import { Router } from '@angular/router'
 })
 export class ConnexionComponent implements OnInit {
   title = 'gestionUtilisateur';
+  allUsers : any;
   constructor(private _auth : AuthService,
-              private _router: Router ){}
+              private _router: Router,private _users : UsersRecuperationService ){}
   registerUserData = {
     email : "pat@example.com",
     password : 'password'
@@ -35,14 +37,14 @@ export class ConnexionComponent implements OnInit {
           this._router.navigate(['/formateurs'])
         }else if (res.profil == 'Finance') {
           this._router.navigate(['/finances'])
-        }else{
+        }else if (res.profil == 'Administrateur'){
           this._router.navigate(['/admin'])
         }
-      
       },
       (err: any) => console.log(err)
     )
   }
+
   getErrorMessage() {
     if (this.email.hasError('required')) {
       return 'Ce champs est obligatoire';
