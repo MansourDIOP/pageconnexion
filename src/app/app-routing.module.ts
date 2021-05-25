@@ -8,7 +8,7 @@ import { AdministrationComponent } from './administration/administration.compone
 import { FormateursComponent } from './formateurs/formateurs.component';
 import { EtudiantsComponent } from './etudiants/etudiants.component';
 import { FinanceComponent } from './finance/finance.component'
-
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 
 
@@ -46,6 +46,10 @@ const routes: Routes = [
   {
     path : 'forget',
     component : MotDePasseOublieComponent
+  },
+  {
+    path : 'update',
+    component : UpdateUserComponent
   }
 ];
 

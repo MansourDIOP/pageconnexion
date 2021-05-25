@@ -10,16 +10,18 @@ import { Router } from '@angular/router'
 })
 export class CreerCompteComponent{
   registerUserData = {
-    nom:"nom",
-    prenom: "prenom",
-    email : "email",
-    profil : 'profil'
+    nom:"",
+    prenom: "",
+    email : "",
+    profil : ''
     
   };
   email = new FormControl('', [Validators.required,
      Validators.email]);
+     
   constructor(private _auth: CreerCompteService,
               private _router: Router) { }
+              
 
   registerUser(){
     this._auth.registerUser(this.registerUserData)
@@ -32,6 +34,7 @@ export class CreerCompteComponent{
       (err: any) => console.log(err)
     )
   }
+  
   getErrorMessage() {
     if (this.email.hasError('required')) {
       return 'Ce champs ne peut pas être vide';

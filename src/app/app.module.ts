@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
+import {CdkTableModule} from '@angular/cdk/table';
 
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -17,7 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { AuthService } from './Services/auth.service';
-import { UsersRecuperationService } from './Services/users-recuperation.service';
+import { CreerCompteService } from './Services/creer-compte.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreerCompteComponent } from './creer-compte/creer-compte.component';
 import { MotDePasseOublieComponent } from './mot-de-passe-oublie/mot-de-passe-oublie.component';
@@ -30,6 +31,7 @@ import { FinanceComponent } from './finance/finance.component'
 // import {GoogleLoginProvider} from 'angularx-social-login';
 
 import { from } from 'rxjs';
+import { UpdateUserComponent } from './update-user/update-user.component';
 const modules = [
   MatSliderModule,
   MatButtonModule,
@@ -37,7 +39,8 @@ const modules = [
   MatInputModule,
   MatIconModule,
   MatSelectModule,
-  MatDialogModule];
+  MatDialogModule,
+  CdkTableModule];
 
 @NgModule({
   declarations: [
@@ -48,7 +51,8 @@ const modules = [
     AdministrationComponent,
     FormateursComponent,
     EtudiantsComponent,
-    FinanceComponent
+    FinanceComponent,
+    UpdateUserComponent
     ],
   imports: [
     BrowserModule,
@@ -61,7 +65,7 @@ const modules = [
     // GoogleLoginProvider, 
     modules
   ],
-  providers: [AuthService,UsersRecuperationService
+  providers: [AuthService,CreerCompteService
     // {//Login with google
     //   provide: 'SocialAuthServiceConfig',
     //   useValue: {

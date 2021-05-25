@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../Services/auth.service'
 import {FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router'
-import { UsersRecuperationService } from '../Services/users-recuperation.service'
 
 @Component({
   selector: 'app-connexion',
@@ -13,7 +12,7 @@ export class ConnexionComponent implements OnInit {
   title = 'gestionUtilisateur';
   allUsers : any;
   constructor(private _auth : AuthService,
-              private _router: Router,private _users : UsersRecuperationService ){}
+              private _router: Router){}
   registerUserData = {
     email : "pat@example.com",
     password : 'password'
