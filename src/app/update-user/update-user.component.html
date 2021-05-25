@@ -27,7 +27,7 @@
         
         <div>
             <mat-form-field appearance="fill">
-                <mat-label>Selectionner votre profil</mat-label>
+                <mat-label>{{registerUserData.profil}}</mat-label>
                 <mat-select name="profil" [(ngModel)]="registerUserData.profil" required>
                     <mat-option value="Administrateur">Administrateur</mat-option>
                     <mat-option value="Formateur">Formateur</mat-option>
@@ -38,7 +38,7 @@
             </mat-form-field>
         </div>
         <div class="example-button-row">
-            <button mat-button color="primary" (click)="registerUser()" style="color: white;">Se connecter</button>
+            <button mat-button color="primary" (click)="updateUser()" style="background-color: blue; color: white; width: 150px;">Modifier</button>
         </div>
     </div>
     <div>

@@ -1,1 +1,47 @@
-<p>administration works!</p>
+<div>
+  <h1 style="color: blue; text-align: center; margin-bottom: 60px; margin-top: 20px;">Administration des utilisateurs</h1>
+  <div class="manageUsers">
+    <!-- <input class="btn btn-primary" (click)="refreshEmployeeList()" type="button" name="" value="Afficher touts les utilisateurs"> -->
+    <input class="btn btn-primary" (click)="creatAccount()" type="button" name="" value="Ajouter un utilisateur">
+  </div>
+  <div class="list row">
+    <div class="col-md-6">
+      <table class="table">
+        <thead>
+          <tr id="thead">
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">email</th>
+            <th scope="col">Profil</th>
+            <th scope="col">Supprimer</th>
+            <th scope="col">Modifier</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of myList">
+            <th scope="row">1</th>
+            <td>{{emp.nom}}</td>
+            <td>{{emp.prenom}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.profil}}</td>
+            <td>
+              <div class="example-button-container">
+                <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)= delUser(emp._id)>
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            </td>
+            <td>
+              <div class="example-button-container">
+                <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon" (click)= updateUser(emp)>
+                  <mat-icon>bookmark</mat-icon>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>      
+    </div>
+  </div>
+</div>

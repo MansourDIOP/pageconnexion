@@ -21,13 +21,21 @@ h1 {
 }
 
 .example-button-row {
-  background-color: blue;
-  width: 150px;
-  margin-left: 40px;
-  text-align: center;
+  display: table-cell;
 }
 
-@media screen and (max-width: 567px) {
+.example-button-row {
+  display: block;
+  margin-left: 35px;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
   #img {
     display: none;
   }
