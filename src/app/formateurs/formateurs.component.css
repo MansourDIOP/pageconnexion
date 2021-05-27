@@ -1,0 +1,55 @@
+.header-title {
+  width: 100%;
+  height: 70px;
+  padding-top: 15px;
+  border-radius: 10px;
+  background-color: #2945dd;
+  text-align: center;
+  line-height: 168, 75px;
+  font-weight: 300;
+  font-size: 70px;
+  margin: 0;
+}
+h1 {
+  font-size: 44px;
+}
+.avatar {
+  border-radius: 50%;
+  font-size: 24px;
+  overflow: hidden;
+}
+.profile-details p {
+  font-size: 36px;
+  font-family: "Regular", Times, serif;
+}
+.image-wrapper {
+  margin: auto;
+  width: 250px;
+  height: 250px;
+}
+.pdv {
+  width: 250px;
+  height: 220px;
+}
+.pdv2 {
+  width: 210px;
+  height: 200px;
+}
+button {
+  background: #5879ed;
+  border-radius: 15px;
+  width: 212px;
+  height: 51px;
+  cursor: pointer;
+  border: none;
+  margin-left: 600px;
+}
+button:hover {
+  box-shadow: 1px 1px 1px 1px #2a50da;
+}
+.body {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

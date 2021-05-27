@@ -19,8 +19,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let emp of myList">
-            <th scope="row">1</th>
+          <tr *ngFor="let emp of myList; let index = index">
+            <th scope="row">{{ index + 1 }}</th>
             <td>{{emp.nom}}</td>
             <td>{{emp.prenom}}</td>
             <td>{{emp.email}}</td>
@@ -35,7 +35,7 @@
             <td>
               <div class="example-button-container">
                 <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon" (click)= updateUser(emp)>
-                  <mat-icon>bookmark</mat-icon>
+                  <mat-icon>edit</mat-icon>
                 </button>
               </div>
             </td>
